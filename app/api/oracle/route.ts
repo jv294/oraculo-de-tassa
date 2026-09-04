@@ -31,7 +31,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     // Retorna string gerada SEMPRE
     const result: SearchResult = {
       query: scryfallQueryFormat,
-      data: cards.slice(0, 12),
+      data: cards, // Envia todas as cartas (até 175 default da scryfall), o frontend cuida do lazy load scroll
       error: hasError || cards.length === 0,
     };
     
