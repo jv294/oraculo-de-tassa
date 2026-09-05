@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { processPromptWithOpenRouter } from '@/services/openrouter';
 import { searchScryfallByQuery } from '@/services/scryfall';
-import { SearchResult } from '@/types';
+import { SearchResult, ScryfallCard } from '@/types';
 
 export async function POST(request: NextRequest): Promise<NextResponse> {
   try {
@@ -18,7 +18,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     const scryfallQueryFormat = await processPromptWithOpenRouter(prompt);
 
     // 2. Tenta buscar no scryfall
-    let cards = [];
+    let cards: ScryfallCard[] = [];
     let hasError = false;
     
     try {
