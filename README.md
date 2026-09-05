@@ -75,35 +75,6 @@ O app estará disponível em [http://localhost:3000](http://localhost:3000)
 
 ---
 
-## ☁️ Deploy na Vercel
-
-### 1. Push para o GitHub
-
-Se ainda não fez:
-
-```bash
-git remote add origin https://github.com/SEU_USUARIO/oraculo-de-tassa.git
-git branch -M main
-git push -u origin main
-```
-
-### 2. Importe o projeto na Vercel
-
-1. Acesse [vercel.com/new](https://vercel.com/new)
-2. Selecione o repositório `oraculo-de-tassa`
-3. Na seção **Environment Variables**, adicione:
-   - **Name:** `OPENROUTER_API_KEY`
-   - **Value:** `sk-or-v1-sua-chave-aqui`
-4. Clique em **Deploy**
-
-### 3. Pronto! 🎉
-
-A Vercel detectará automaticamente o Next.js, instalará dependências e hará build. Em menos de 1 minuto seu Oráculo estará online.
-
-> **Importante:** A Vercel define automaticamente um User-Agent customizado. Se encontrar erro 400 do Scryfall, a rota já inclui `User-Agent: OraculoDeTassa/1.0` nos headers.
-
----
-
 ## 📁 Estrutura do Projeto
 
 ```
